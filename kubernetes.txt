@@ -58,6 +58,7 @@ curl -O ~ https://d-02.winudf.com/b/apk/bXkudjFydHlvei5oZWxsb3dvcmxkXzFfNWY3M2Ex
 sh 'npm install --save-dev @angular-devkit/build-angular'
 sh 'npm install --save-dev http-server'
 sh 'npm install -g @angular/cli'
+
  //   "start": "ng serve",
 
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-debian-9

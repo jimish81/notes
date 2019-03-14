@@ -89,11 +89,13 @@ If the image isn’t available locally on the machine, Docker pulls it from the re
 [centos@ip-10-0-1-36 ~]$ sudo docker exec -u 0 -it DockerJenkins /bin/bash
 <Install docker inside Jenkins>
 https://docs.docker.com/install/linux/docker-ce/debian/
-
+http://34.209.123.174
 <To check the OS type in UNIX>
 cat /etc/os-release
 
-sudo docker run --name custom-jenkins-container-4 --privileged -d -p 8080:8080 custom-jenkins
-sudo docker run --name custom-jenkins-container -d -p 8080:8080 -v /var/run/docker.sock/:/var/run/docker.sock custom-jenkins
-custom-jenkins-container
+        sh 'npm install --save-dev @angular-devkit/build-angular'
+        sh 'npm install --save-dev http-server'
+        sh 'npm install -g @angular/cli'
 
+sudo docker run --name custom-jenkins-container-4 --privileged -d -p 8080:8080 custom-jenkins
+sudo docker run --name custom-jenkins-container -d -p 8080:8080 3030:3030 -v /var/run/docker.sock/:/var/run/docker.sock custom-jenkins
