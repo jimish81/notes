@@ -19,12 +19,12 @@ sudo docker ps -a
 https://docs.docker.com/get-started/part2/
 <Build a image>
 [centos@ip-10-0-1-36 app1]$ sudo docker build --tag=friendlyhello .
-Note: This creates a Docker image, which weâ€™re going to name using the --tag option. Use -t if you want to use the shorter option.
+Note: This creates a Docker image, which we’re going to name using the --tag option. Use -t if you want to use the shorter option.
 
 <See the image>
 [centos@ip-10-0-1-36 app1]$ sudo docker image ls
 
-<Run the app, mapping your machineâ€™s port 4000 to the containerâ€™s published port 80 using -p>
+<Run the app, mapping your machine’s port 4000 to the container’s published port 80 using -p>
 [centos@ip-10-0-1-36 app1]$ sudo docker run -p 4000:80 friendlyhello
 or
 [centos@ip-10-0-1-36 app1]$ sudo docker run --name friendly-hello -d  -p 9001:80 friendlyhello
@@ -74,7 +74,7 @@ Note: Pull and run the image from the remote repository
 From now on, you can use docker run and run your app on any machine with this command:
 
 docker run -p 4000:80 username/repository:tag
-If the image isnâ€™t available locally on the machine, Docker pulls it from the repository.
+If the image isn’t available locally on the machine, Docker pulls it from the repository.
 
 <Check running container>
 [centos@ip-10-0-1-36 ~]$ sudo docker container ls
@@ -94,4 +94,6 @@ https://docs.docker.com/install/linux/docker-ce/debian/
 cat /etc/os-release
 
 sudo docker run --name custom-jenkins-container-4 --privileged -d -p 8080:8080 custom-jenkins
-sudo docker run --name custom-jenkins-container-4 -d -p 8080:8080 -v /var/run/docker.sock/:/var/run/docker.sock custom-jenkins
+sudo docker run --name custom-jenkins-container -d -p 8080:8080 -v /var/run/docker.sock/:/var/run/docker.sock custom-jenkins
+custom-jenkins-container
+

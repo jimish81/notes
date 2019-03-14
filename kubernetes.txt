@@ -1,0 +1,118 @@
+Kubectl
+minikube
+
+
+Kubernetes:
+[root@ip-10-0-1-36 mini-kube]# kubectl create -f nginx-svc.yaml <to create deplyment/service>
+[root@ip-10-0-1-36 mini-kube]# kubectl get svc <To view the service>
+[root@ip-10-0-1-36 mini-kube]# kubectl get pod <To view the POD>
+
+kubectl get svc
+
+
+
+After deployment to access that service is required. 
+ClusterID Communication between pods.
+Node port service is used to expose to outer world
+Load balancer is used for same purpose but exposed through load balancer url
+
+kubectl delete service hello-minikube //to delete service
+kubectl delete deployment hello-minikube-6fd785d459-sbzpq //to delete deployment
+
+Explore Namespace
+
+[centos@ip-10-0-1-36 ~]$ kubectl get ns <To check the namespace>
+[centos@ip-10-0-1-36 ~]$ kubectl create -f ns avik-namespace <To create namespace>
+
+apiVersion: v1
+kind: PersistentVolumnClaim
+metadata:
+        name: nginx-jenkins-pv-claim
+spec:
+        accessModes:
+                - ReadWriteOnce
+        resources:
+                requests:
+                        storage: 5Gi
+/nginx-jenkins/jenkins/http://moonlightbox.logdown.com/posts/2016/02/01/linux-install-android-sdk-in-centos7-updated-2017-07-24
+
+
+# sudo wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
+sudo unzip sdk-tools-linux-3859397.zip
+cd /opt
+sudo chown -R root:root sdk-tools-linux-3859397
+sudo ln -s sdk-tools-linux-3859397 android-sdk
+
+
+# sudo vim /etc/profile.d/android-sdk-env.sh
+
+export ANDROID_HOME="/opt/android-sdk"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+
+# sudo source /etc/profile.d/android-sdk-env.sh
+
+
+curl -O ~ https://d-02.winudf.com/b/apk/bXkudjFydHlvei5oZWxsb3dvcmxkXzFfNWY3M2ExMw?_fn=SGVsbG9Xb3JsZF92MS4wX2Fwa3B1cmUuY29tLmFwaw&_p=bXkudjFydHlvei5oZWxsb3dvcmxk&as=bab786acdd5818ba5e14620caeb9ce515c8648ea&c=1%7CPRODUCTIVITY%7CZGV2PVZpY3RvciUyMEt1YmFzaG9rJnQ9YXBrJnZuPTEuMCZ2Yz0x&k=df01f2c6569d254b1ed6a3371ea490eb5c888433
+
+
+sh 'npm install --save-dev @angular-devkit/build-angular'
+sh 'npm install --save-dev http-server'
+sh 'npm install -g @angular/cli'
+ //   "start": "ng serve",
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-debian-9
+apt update
+
+Jenkins plugin
+performance
+delivery-pipeline-plugin
+build-pipeline-plugin
+
+
+install google chrome
+
+
+curl http://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.10.0/allure-commandline-2.10.0.tgz -o allure.tgz
+tar -xvzf allure.tgz
+[centos@ip-10-0-1-36 ~]$ mv allure-2.10.0 /opt/allure
+root@e89f221330f6:/app# cd /opt/allure/b
+
+http://34.220.2.144
+
+
+
+  Scenario: open http://34.220.2.144:3000/
+    Given user loads browser
+    When user navigates to http://34.220.2.144:3000/
+    Then user sees element image1
+    Then user sees element link1
+    Then user sees element link2
+    Then user takes a screenshot
+
+
+
+everytime no need to enter usename & password, to create keys
+ls -al ~/.ssh/
+check rsa key is presnt if not we need to create 
+ssh-keygen -t rsa -b 4096 -C "mazumder.avik@tcs.com"
+enter all default values 
+
+check whether u r getting PID using command 
+eval $(ssh-agent -s)
+Agent pid 21420
+
+ssh-add ~/.ssh/id_rsa <- process binding
+Identity added: /home/centos/.ssh/id_rsa (/home/centos/.ssh/id_rsa)
+
+[centos@ip-10-0-1-140 git-demo]$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqSOQzllP8e8aoUE/GVIhqOMXGfY+x0EYJ4ZAF5f+CyRTmj/NfNOdycjq9xdIic3taOGGcmFBFkwgCytsofE2FyV036B7TBYHN2M0Eqim4Jpoda3m5OaRr6MVVk6OKe59PH5SLio23wdHX/IN/eEcpNyuDczGZygT7Zi4pkGPvSHmhieWQOGgwRbJdQpCAAYDobUQB1HIM33hXbBd2/LHqdYpASUEHVF6/uq8xBxKS9v/2CIJlh/x0X5WWCtZZ4EPAGPymzL3r5Rv0QU9xIKymVZH7IqVLOAHALJbmQLG3g+xg51IdvxPVKwQlD+tgV3lU5M6qZzPOK9Erv/AFgh4ukJ+XrwyHqVpg43hTWN5TF9JOe3QtU8hmuzHbtMGCvJfPSYW1y+sZHDF+bZYdRq96IzSrsXt1+n3y2zwJUmzS4TDx2olckjNW2sjSsDnQFBYeJyoRJ5h1M0p0AwsmgtcTu0IqGfXKU6tDRaWJybAQOTDbtAeUIdhBFSKEYtR90X/OCevWiupVi5FSIvP3LmKRQN1KjatM8Vr9bTBmWsWY3bEHLMaVe4gIB2Tog8pWoKHh3ptEAbLqJHrIQI8OX5As4dLR3Cdv8zAe3Bo2/EtaYAKa63QWWO9Wov+JhuW2MoK98FjV23OIfaoz+yi1K5TJxwAYMuQSiOkUhJ8xJmiqcQ== jimish81@gmail.com
+
+Now goto Github -> settings -> SSH and GPG keys ->NewSSHKey
+paste key & give name 
+
+Goto simple-java-maven-app project 
+click on Clone or download -> Use SSH
+copy URL and type below command at Git local 
+git clone git@github.com:jimish81/simple-java-maven-app.git
+
+export CHROME_BIN=/usr/bin/chromium-browser
